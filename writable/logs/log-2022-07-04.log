@@ -1,0 +1,6 @@
+ERROR - 2022-07-04 11:00:24 --> Column 'sq_sales_code' cannot be null
+ERROR - 2022-07-04 11:11:41 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`sq_mstr`, CONSTRAINT `sq_mstr_fk_sales_code` FOREIGN KEY (`sq_sales_code`) REFERENCES `sales_mstr` (`sales_code`))
+ERROR - 2022-07-04 13:07:17 --> Column 'sq_cus_code' cannot be null
+ERROR - 2022-07-04 13:07:45 --> Column 'sq_cus_code' cannot be null
+ERROR - 2022-07-04 13:42:34 --> Unknown column 'active' in 'where clause'
+ERROR - 2022-07-04 13:43:04 --> Unknown column 'active' in 'where clause'

@@ -1,0 +1,2 @@
+ERROR - 2022-12-19 16:03:18 --> Unknown column 'stock_mstr.stock_item_code' in 'on clause'
+ERROR - 2022-12-19 16:10:38 --> Unknown column 'stock_mstr.stock_item_code' in 'on clause'

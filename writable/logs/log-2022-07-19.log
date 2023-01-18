@@ -1,0 +1,12 @@
+CRITICAL - 2022-07-19 03:54:21 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 171.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-07-19 15:58:20 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-07-19 16:26:48 --> Column 'sq_cus_total' cannot be null
+ERROR - 2022-07-19 16:27:07 --> Column 'sq_cus_total' cannot be null
+ERROR - 2022-07-19 16:27:36 --> Column 'sq_cus_total' cannot be null
+CRITICAL - 2022-07-19 04:29:49 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

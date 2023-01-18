@@ -1,0 +1,99 @@
+ERROR - 2022-12-06 10:49:18 --> Table 'joki_kurniawaty_rev1.level_mstr' doesn't exist
+CRITICAL - 2022-12-06 01:32:55 --> Invalid file: admin/profile.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/profile.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/profile', [], true)
+ 3 APPPATH\Controllers\Admin.php(186): view('admin/profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->profile()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 01:35:29 --> Invalid file: admin/stock.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/stock.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/stock', [], true)
+ 3 APPPATH\Controllers\Admin.php(79): view('admin/stock', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->stock()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 01:37:10 --> Invalid file: admin/stock.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/stock.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/stock', [], true)
+ 3 APPPATH\Controllers\Admin.php(79): view('admin/stock', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->stock()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 01:52:45 --> Invalid file: admin/profile.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/profile.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/profile', [], true)
+ 3 APPPATH\Controllers\Admin.php(186): view('admin/profile', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->profile()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 02:12:27 --> Invalid file: admin/user.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/user', [], true)
+ 3 APPPATH\Controllers\Admin.php(155): view('admin/user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->warehouse()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-12-06 15:14:53 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+ERROR - 2022-12-06 15:14:56 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+ERROR - 2022-12-06 15:16:08 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+ERROR - 2022-12-06 15:16:12 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+ERROR - 2022-12-06 15:33:19 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+ERROR - 2022-12-06 15:33:46 --> Unknown column 'user_mstr.user_last_activity' in 'field list'
+CRITICAL - 2022-12-06 06:17:49 --> Invalid file: admin/measure.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/measure.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/measure', [], true)
+ 3 APPPATH\Controllers\Admin.php(82): view('admin/measure', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->measure()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-06 17:51:50 --> fwrite(): Write of 76 bytes failed with errno=22 Invalid argument
+in SYSTEMPATH\CLI\CLI.php on line 1013.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'fwrite(): Write of 76 bytes failed with errno=22 Invalid argument', 'SYSTEMPATH\\CLI\\CLI.php', 1013)
+ 2 SYSTEMPATH\CLI\CLI.php(1013): fwrite(resource (stream), '[0;32mCodeIgniter development server started on http://localhost:8081[0m
+')
+ 3 SYSTEMPATH\CLI\CLI.php(364): CodeIgniter\CLI\CLI::fwrite(resource (stream), '[0;32mCodeIgniter development server started on http://localhost:8081[0m
+')
+ 4 SYSTEMPATH\Commands\Server\Serve.php(97): CodeIgniter\CLI\CLI::write('[0;32mCodeIgniter development server started on http://localhost:8081[0m', 'green')
+ 5 SYSTEMPATH\Commands\Server\Serve.php(114): CodeIgniter\Commands\Server\Serve->run([])
+ 6 SYSTEMPATH\CLI\Commands.php(63): CodeIgniter\Commands\Server\Serve->run([])
+ 7 SYSTEMPATH\CLI\CommandRunner.php(65): CodeIgniter\CLI\Commands->run('serve', [])
+ 8 SYSTEMPATH\CLI\CommandRunner.php(51): CodeIgniter\CLI\CommandRunner->index([])
+ 9 SYSTEMPATH\CodeIgniter.php(891): CodeIgniter\CLI\CommandRunner->_remap('index', [...])
+10 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(CodeIgniter\CLI\CommandRunner))
+11 SYSTEMPATH\CodeIgniter.php(347): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\CLI\Console.php(48): CodeIgniter\CodeIgniter->run()
+13 ROOTPATH\spark(86): CodeIgniter\CLI\Console->run()
+CRITICAL - 2022-12-06 17:51:50 --> Uncaught ErrorException: fwrite(): Write of 2 bytes failed with errno=22 Invalid argument in C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\CLI\CLI.php:1013
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(8, 'fwrite(): Write...', 'C:\\xampp\\htdocs...', 1013)
+#1 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\CLI\CLI.php(1013): fwrite(Resource id #2, '\r\n')
+#2 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\CLI\CLI.php(364): CodeIgniter\CLI\CLI::fwrite(Resource id #2, '\r\n')
+#3 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\CLI\CLI.php(441): CodeIgniter\CLI\CLI::write()
+#4 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\app\Views\errors\cli\error_exception.php(6): CodeIgniter\CLI\CLI::newLine()
+#5 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\Debug\Exceptions.php(239): include('C:\\xampp\\htdocs...')
+#6 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\Debug\Exceptions.php(242): CodeIgniter\Debug\Exceptions->CodeIgniter\Debug\{closure}()
+#7 C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\system\Debug\Exceptions.php(126): CodeIgniter\Debug\Exceptions->render(Object(ErrorException), 500)
+#8 [internal function]: CodeIgniter\Debug\Exceptions->exceptionHandler(Object(ErrorException))
+#9 {main}
+  thrown
+in SYSTEMPATH\CLI\CLI.php on line 1013.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()

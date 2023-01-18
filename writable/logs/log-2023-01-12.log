@@ -1,0 +1,12 @@
+CRITICAL - 2023-01-12 21:09:39 --> Undefined variable $sup_es
+in APPPATH\Views\admin\sq_add.php on line 42.
+ 1 APPPATH\Views\admin\sq_add.php(42): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $sup_es', 'APPPATH\\Views\\admin\\sq_add.php', 42)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\sq_add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sq_add', [], true)
+ 5 APPPATH\Controllers\Admin.php(157): view('admin/sq_add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_add()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

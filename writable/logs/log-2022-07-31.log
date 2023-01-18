@@ -1,0 +1,10 @@
+CRITICAL - 2022-07-31 21:21:15 --> Invalid file: admin/suplier.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/suplier.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/suplier', [], true)
+ 3 APPPATH\Controllers\Admin.php(200): view('admin/suplier', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->suplier()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

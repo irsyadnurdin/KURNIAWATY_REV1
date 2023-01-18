@@ -1,0 +1,53 @@
+ERROR - 2022-07-26 09:56:15 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:18 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:21 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:24 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:45 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:48 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:56:52 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 09:57:10 --> Table 'exa_db.user_mstr' doesn't exist
+ERROR - 2022-07-26 22:32:16 --> Error connecting to the database: No connection could be made because the target machine actively refused it
+CRITICAL - 2022-07-26 22:32:16 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `foto`', [], false)
+ 3 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Controllers\Admin.php(33): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\Admin.php(60): App\Controllers\Admin->required()
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->item()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-26 22:36:44 --> Class "App\Models\FotoModel" not found
+in APPPATH\Controllers\Admin.php on line 18.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-26 22:37:47 --> Undefined property: App\Controllers\Admin::$foto
+in APPPATH\Controllers\Admin.php on line 31.
+ 1 APPPATH\Controllers\Admin.php(31): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$foto', 'APPPATH\\Controllers\\Admin.php', 31)
+ 2 APPPATH\Controllers\Admin.php(58): App\Controllers\Admin->required()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->item()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-07-26 22:38:22 --> Undefined variable $pengaturan
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pengaturan', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/item', [], true)
+ 6 APPPATH\Controllers\Admin.php(59): view('admin/item', [...])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->item()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

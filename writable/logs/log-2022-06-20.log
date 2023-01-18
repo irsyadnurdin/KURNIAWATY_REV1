@@ -1,0 +1,44 @@
+CRITICAL - 2022-06-20 01:22:30 --> Class "PHPMailer\PHPMailer\PHPMailer" not found
+in APPPATH\Controllers\Login.php on line 181.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->auth_lupa_password()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-20 01:26:30 --> Class "Nachoaguirre\Ci4phpmailer\Libraries\Email" not found
+in APPPATH\Controllers\Login.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->auth_lupa_password()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-20 01:26:31 --> Class "Nachoaguirre\Ci4phpmailer\Libraries\Email" not found
+in APPPATH\Controllers\Login.php on line 204.
+ 1 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->auth_lupa_password()
+ 2 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-06-20 01:43:32 --> Email: sendWithMail throwed mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+ERROR - 2022-06-20 01:45:05 --> Email: sendWithMail throwed mail(): Failed to connect to mailserver at &quot;localhost&quot; port 25, verify your &quot;SMTP&quot; and &quot;smtp_port&quot; setting in php.ini or use ini_set()
+CRITICAL - 2022-06-20 01:50:24 --> Undefined property: App\Controllers\Login::$email
+in APPPATH\Controllers\Login.php on line 186.
+ 1 APPPATH\Controllers\Login.php(186): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$email', 'APPPATH\\Controllers\\Login.php', 186)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->auth_lupa_password()
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-06-20 02:07:47 --> require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory
+in APPPATH\Controllers\Login.php on line 21.
+ 1 APPPATH\Controllers\Login.php(21): CodeIgniter\Debug\Exceptions->errorHandler(2, 'require(PHPMailer/src/PHPMailer.php): Failed to open stream: No such file or directory', 'APPPATH\\Controllers\\Login.php', 21)
+ 2 APPPATH\Controllers\Login.php(21): require()
+ 3 SYSTEMPATH\Autoloader\Autoloader.php(284): include_once('APPPATH\\Controllers\\Login.php')
+ 4 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Login.php')
+ 5 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Login')
+ 6 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Login')
+ 7 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Login', true)
+ 8 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

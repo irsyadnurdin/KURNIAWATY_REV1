@@ -1,0 +1,26 @@
+ERROR - 2022-07-27 08:27:35 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+ERROR - 2022-07-27 08:27:39 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+ERROR - 2022-07-27 08:27:42 --> Error connecting to the database: Access denied for user '****'@'localhost' (using password: YES)
+ERROR - 2022-07-27 08:42:50 --> Unknown column 'sqd_sub_tota' in 'field list'
+CRITICAL - 2022-07-27 10:39:59 --> Undefined property: App\Controllers\Login::$foto
+in APPPATH\Controllers\Login.php on line 34.
+ 1 APPPATH\Controllers\Login.php(34): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Login::$foto', 'APPPATH\\Controllers\\Login.php', 34)
+ 2 APPPATH\Controllers\Login.php(46): App\Controllers\Login->required()
+ 3 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Login->index()
+ 4 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Login))
+ 5 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 6 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 7 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-07-27 16:06:56 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`item_mstr`, CONSTRAINT `item_mstr_fk_group` FOREIGN KEY (`item_group`) REFERENCES `itemg_group` (`group_code`))
+ERROR - 2022-07-27 16:07:00 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`item_mstr`, CONSTRAINT `item_mstr_fk_group` FOREIGN KEY (`item_group`) REFERENCES `itemg_group` (`group_code`))
+ERROR - 2022-07-27 16:07:03 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`item_mstr`, CONSTRAINT `item_mstr_fk_group` FOREIGN KEY (`item_group`) REFERENCES `itemg_group` (`group_code`))
+CRITICAL - 2022-07-27 23:54:00 --> Invalid file: admin/opname.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/opname.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/opname', [], true)
+ 3 APPPATH\Controllers\Admin.php(123): view('admin/opname', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->opname()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

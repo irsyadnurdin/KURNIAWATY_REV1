@@ -1,0 +1,148 @@
+ERROR - 2022-08-23 13:08:54 --> Email: sendWithSmtp throwed fsockopen(): Unable to connect to tls://smtp.googlemail.com:465 (No connection could be made because the target machine actively refused it)
+ERROR - 2022-08-23 13:08:59 --> Email: sendWithSmtp throwed fsockopen(): Unable to connect to tls://smtp.googlemail.com:465 (No connection could be made because the target machine actively refused it)
+CRITICAL - 2022-08-23 02:25:46 --> Invalid file: admin/po.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('admin/po', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 02:47:22 --> Invalid file: admin/po.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('admin/po', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 02:49:47 --> Invalid file: admin/po.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po', [], true)
+ 3 APPPATH\Controllers\Admin.php(146): view('admin/po', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 02:51:04 --> Undefined array key "user_branch_code"
+in APPPATH\Views\admin\po.php on line 88.
+ 1 APPPATH\Views\admin\po.php(88): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_branch_code"', 'APPPATH\\Views\\admin\\po.php', 88)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po', [], true)
+ 5 APPPATH\Controllers\Admin.php(146): view('admin/po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po()
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:14:52 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(157): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('hgdas')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:17:01 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(157): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:21:01 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(157): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:58:23 --> Undefined property: App\Controllers\Admin::$pr_mstr
+in APPPATH\Controllers\Admin.php on line 152.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$pr_mstr', 'APPPATH\\Controllers\\Admin.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:58:26 --> Undefined property: App\Controllers\Admin::$pr_mstr
+in APPPATH\Controllers\Admin.php on line 152.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$pr_mstr', 'APPPATH\\Controllers\\Admin.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-0009721')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:58:34 --> Undefined property: App\Controllers\Admin::$pr_mstr
+in APPPATH\Controllers\Admin.php on line 152.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$pr_mstr', 'APPPATH\\Controllers\\Admin.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-0009721')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:58:37 --> Undefined property: App\Controllers\Admin::$pr_mstr
+in APPPATH\Controllers\Admin.php on line 152.
+ 1 APPPATH\Controllers\Admin.php(152): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$pr_mstr', 'APPPATH\\Controllers\\Admin.php', 152)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-0009721')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:59:09 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(162): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 03:59:15 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(162): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 04:00:56 --> Invalid file: admin/po_add.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/po_add.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 3 APPPATH\Controllers\Admin.php(162): view('admin/po_add', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-23 04:04:19 --> Undefined variable $po_pr_code
+in APPPATH\Views\admin\po_add.php on line 32.
+ 1 APPPATH\Views\admin\po_add.php(32): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $po_pr_code', 'APPPATH\\Views\\admin\\po_add.php', 32)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\po_add.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/po_add', [], true)
+ 5 APPPATH\Controllers\Admin.php(164): view('admin/po_add', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

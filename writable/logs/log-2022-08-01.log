@@ -1,0 +1,267 @@
+CRITICAL - 2022-08-01 11:07:48 --> Class "App\Models\Pod_Detail_Model" not found
+in APPPATH\Controllers\Po.php on line 20.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\Po->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 11:08:08 --> Unknown column 'po_mstr.po_cus_code' in 'on clause'
+ERROR - 2022-08-01 11:08:51 --> Unknown column 'po_mstr.po_cus_code' in 'on clause'
+ERROR - 2022-08-01 11:34:22 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:34:37 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:35:01 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:35:40 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:35:52 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:36:04 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:36:22 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:37:38 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:37:47 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 11:37:53 --> Cannot add or update a child row: a foreign key constraint fails (`exaposdb2`.`po_mstr`, CONSTRAINT `po_mstr_fk_sup_code` FOREIGN KEY (`po_sup_code`) REFERENCES `suplier_mstr` (`sup_code`))
+ERROR - 2022-08-01 00:30:07 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 00:30:07 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_Admin.php(23): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_Admin->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('en/admin/sales', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 00:30:07 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 00:30:07 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/get_user_online', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 00:30:08 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 00:30:08 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/update_last_activity', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 01:06:29 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 01:06:29 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/update_last_activity', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 01:06:30 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 01:06:30 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/get_user_online', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 01:10:14 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 01:10:14 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/update_last_activity', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 01:10:15 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 01:10:15 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('irsyadnurdin')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJpcnN5YWRudXJkaW4iLCJpYXQiOjE2NTkzMTczODUsImV4cCI6MTY1OTkyMjE4NX0.0yOIdOAXmER-avVFWCG8XLo8DMP0vZspZSiGWUz1Rq0')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/get_user_online', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-01 02:06:30 --> Undefined array key "user_level"
+in APPPATH\Filters\Auth_Admin_Pusat.php on line 20.
+ 1 APPPATH\Filters\Auth_Admin_Pusat.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_level"', 'APPPATH\\Filters\\Auth_Admin_Pusat.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_Admin_Pusat->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('admin/branch', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-01 02:06:57 --> Undefined array key "user_level"
+in APPPATH\Filters\Auth_Admin_Pusat.php on line 20.
+ 1 APPPATH\Filters\Auth_Admin_Pusat.php(20): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "user_level"', 'APPPATH\\Filters\\Auth_Admin_Pusat.php', 20)
+ 2 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_Admin_Pusat->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 3 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('admin/branch', 'before')
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 14:15:45 --> Unknown column 'branch_date' in 'field list'
+ERROR - 2022-08-01 14:15:58 --> Unknown column 'branch_date' in 'field list'
+ERROR - 2022-08-01 14:18:12 --> Unknown column 'branch_date' in 'field list'
+ERROR - 2022-08-01 03:37:30 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 03:37:30 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('ahmadrizal')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJhaG1hZHJpemFsIiwiaWF0IjoxNjU5MzM5MTM0LCJleHAiOjE2NTk5NDM5MzR9.BnXSLDcFofr58RTcBs8V8zGBhTal648MHMQiy0YhlX8')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/get_user_online', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 03:37:30 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 03:37:30 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('ahmadrizal')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJhaG1hZHJpemFsIiwiaWF0IjoxNjU5MzM5MTM0LCJleHAiOjE2NTk5NDM5MzR9.BnXSLDcFofr58RTcBs8V8zGBhTal648MHMQiy0YhlX8')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/update_last_activity', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 03:43:07 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 03:43:07 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('ahmadrizal')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJhaG1hZHJpemFsIiwiaWF0IjoxNjU5MzM5MTM0LCJleHAiOjE2NTk5NDM5MzR9.BnXSLDcFofr58RTcBs8V8zGBhTal648MHMQiy0YhlX8')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/get_user_online', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-01 03:43:07 --> Error connecting to the database: A socket operation was attempted to an unreachable host
+CRITICAL - 2022-08-01 03:43:07 --> Unable to connect to the database.
+Main connection [MySQLi]: A socket operation was attempted to an unreachable host
+in SYSTEMPATH\Database\BaseConnection.php on line 415.
+ 1 SYSTEMPATH\Database\BaseConnection.php(585): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `user_mstr`
+WHERE `user_name` = :user_name:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(249): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(622): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\User_Mstr_Model.php(22): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Helpers\jwt_helper.php(22): App\Models\User_Mstr_Model->get_User_Name('ahmadrizal')
+ 7 APPPATH\Filters\Auth_JWT.php(24): validate_JWT('eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ1c2VyX25hbWUiOiJhaG1hZHJpemFsIiwiaWF0IjoxNjU5MzM5MTM0LCJleHAiOjE2NTk5NDM5MzR9.BnXSLDcFofr58RTcBs8V8zGBhTal648MHMQiy0YhlX8')
+ 8 SYSTEMPATH\Filters\Filters.php(173): App\Filters\Auth_JWT->before(Object(CodeIgniter\HTTP\IncomingRequest), null)
+ 9 SYSTEMPATH\CodeIgniter.php(442): CodeIgniter\Filters\Filters->run('user/update_last_activity', 'before')
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-01 04:16:49 --> syntax error, unexpected variable "$data", expecting "]"
+in APPPATH\Controllers\Pricelist.php on line 98.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Pricelist.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Pricelist')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Pricelist')
+ 4 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Pricelist', true)
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-01 23:57:56 --> Invalid file: admin/user.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/user.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/user', [], true)
+ 3 APPPATH\Controllers\Admin.php(178): view('admin/user', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->kasir()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

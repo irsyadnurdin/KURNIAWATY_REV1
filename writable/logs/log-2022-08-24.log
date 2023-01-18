@@ -1,0 +1,64 @@
+CRITICAL - 2022-08-24 07:45:26 --> Undefined property: App\Controllers\Admin::$prd_detail
+in APPPATH\Controllers\Admin.php on line 164.
+ 1 APPPATH\Controllers\Admin.php(164): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$prd_detail', 'APPPATH\\Controllers\\Admin.php', 164)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-24 07:46:00 --> Unknown column 'pr_code' in 'where clause'
+CRITICAL - 2022-08-24 07:46:00 --> Unknown column 'pr_code' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `prd_detail`
+WHERE `pr_code` = \'PR-220823-000972\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `prd_detail`
+WHERE `pr_code` = \'PR-220823-000972\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `prd_detail`
+WHERE `pr_code` = \'PR-220823-000972\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `prd_detail`
+WHERE `pr_code` = :pr_code:', [...], false)
+ 5 SYSTEMPATH\Model.php(222): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(584): CodeIgniter\Model->doFindAll(0, 0)
+ 7 APPPATH\Controllers\Admin.php(167): CodeIgniter\BaseModel->findAll()
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_add('PR-220823-000972')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-08-24 08:35:34 --> syntax error, unexpected token "}"
+in APPPATH\Controllers\Admin.php on line 172.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(261): CodeIgniter\Autoloader\Autoloader->includeFile('APPPATH\\Controllers\\Admin.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(239): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\Admin')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\Admin')
+ 4 SYSTEMPATH\CodeIgniter.php(848): class_exists('\\App\\Controllers\\Admin', true)
+ 5 SYSTEMPATH\CodeIgniter.php(455): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+ERROR - 2022-08-24 20:57:43 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:57:46 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:57:49 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:57:52 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:57:54 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:57:57 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:01 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:04 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:08 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:11 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:15 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:18 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:21 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:24 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:58:27 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:43 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:46 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:48 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:50 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:52 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:56 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 20:59:59 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)
+ERROR - 2022-08-24 21:01:59 --> Cannot add or update a child row: a foreign key constraint fails (`joki_inventori`.`po_mstr`, CONSTRAINT `po_mstr_ibfk_1` FOREIGN KEY (`po_pr_code`) REFERENCES `pr_mstr` (`pr_code`) ON DELETE CASCADE ON UPDATE CASCADE)

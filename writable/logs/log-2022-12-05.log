@@ -1,0 +1,17 @@
+CRITICAL - 2022-12-05 22:09:44 --> Undefined array key "level_name"
+in APPPATH\Views\admin\layout\header.php on line 69.
+ 1 APPPATH\Views\admin\layout\header.php(69): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "level_name"', 'APPPATH\\Views\\admin\\layout\\header.php', 69)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\header.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(429): CodeIgniter\View\View->render('admin/layout/header', null, true)
+ 5 APPPATH\Views\admin\layout\admin_layout.php(60): CodeIgniter\View\View->include('admin/layout/header')
+ 6 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 7 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 8 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 9 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/index', [], true)
+10 APPPATH\Controllers\Admin.php(57): view('admin/index', [...])
+11 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->index()
+12 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+13 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+14 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+15 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')

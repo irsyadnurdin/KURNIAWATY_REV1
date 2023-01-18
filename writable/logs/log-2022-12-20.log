@@ -1,0 +1,233 @@
+CRITICAL - 2022-12-20 00:16:30 --> Invalid file: transaksi/invoice.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('transaksi/invoice.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('transaksi/invoice', [], true)
+ 3 APPPATH\Controllers\Admin.php(270): view('transaksi/invoice', [])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:20:47 --> Undefined variable $setting_mstr
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting_mstr', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/index', [], true)
+ 6 APPPATH\Controllers\Admin.php(270): view('admin/index', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:22:25 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\tecnickcom\tcpdf\include\tcpdf_static.php on line 1841.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-20 00:22:26 --> Undefined variable $setting_mstr
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting_mstr', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/suplier', [], true)
+ 6 APPPATH\Controllers\Admin.php(266): view('admin/suplier', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:22:26 --> Undefined variable $setting_mstr
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting_mstr', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/suplier', [], true)
+ 6 APPPATH\Controllers\Admin.php(266): view('admin/suplier', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:22:27 --> Undefined variable $setting_mstr
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting_mstr', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/suplier', [], true)
+ 6 APPPATH\Controllers\Admin.php(266): view('admin/suplier', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:22:27 --> Undefined variable $setting_mstr
+in APPPATH\Views\admin\layout\admin_layout.php on line 5.
+ 1 APPPATH\Views\admin\layout\admin_layout.php(5): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $setting_mstr', 'APPPATH\\Views\\admin\\layout\\admin_layout.php', 5)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\layout\\admin_layout.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\View\View.php(229): CodeIgniter\View\View->render('admin/layout/admin_layout', [], true)
+ 5 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/suplier', [], true)
+ 6 APPPATH\Controllers\Admin.php(266): view('admin/suplier', [])
+ 7 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->invoice()
+ 8 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 9 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+11 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:23:33 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\tecnickcom\tcpdf\include\tcpdf_static.php on line 1841.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2022-12-20 00:25:58 --> Maximum execution time of 60 seconds exceeded
+in VENDORPATH\tecnickcom\tcpdf\include\tcpdf_static.php on line 1841.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+ERROR - 2022-12-20 00:45:13 --> Unknown column 'pr_status' in 'where clause'
+CRITICAL - 2022-12-20 00:45:13 --> Unknown column 'pr_status' in 'where clause'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 292.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(292): mysqli->query('SELECT *
+FROM `po_mstr`
+JOIN `suplier_mstr` ON `suplier_mstr`.`sup_code` = `po_mstr`.`po_sup`
+WHERE `pr_status` = \'F\'
+AND `po_mstr`.`po_code` = \'PO-221219-000764\'', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(678): CodeIgniter\Database\MySQLi\Connection->execute('SELECT *
+FROM `po_mstr`
+JOIN `suplier_mstr` ON `suplier_mstr`.`sup_code` = `po_mstr`.`po_sup`
+WHERE `pr_status` = \'F\'
+AND `po_mstr`.`po_code` = \'PO-221219-000764\'')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('SELECT *
+FROM `po_mstr`
+JOIN `suplier_mstr` ON `suplier_mstr`.`sup_code` = `po_mstr`.`po_sup`
+WHERE `pr_status` = \'F\'
+AND `po_mstr`.`po_code` = \'PO-221219-000764\'')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1585): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `po_mstr`
+JOIN `suplier_mstr` ON `suplier_mstr`.`sup_code` = `po_mstr`.`po_sup`
+WHERE `pr_status` = :pr_status:
+AND `po_mstr`.`po_code` = :po_mstr.po_code:', [...], false)
+ 5 SYSTEMPATH\Model.php(181): CodeIgniter\Database\BaseBuilder->get()
+ 6 SYSTEMPATH\BaseModel.php(523): CodeIgniter\Model->doFind(true, 'PO-221219-000764')
+ 7 APPPATH\Controllers\Admin.php(193): CodeIgniter\BaseModel->find('PO-221219-000764')
+ 8 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 9 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+10 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:45:22 --> Undefined property: App\Controllers\Admin::$pod_detail
+in APPPATH\Controllers\Admin.php on line 195.
+ 1 APPPATH\Controllers\Admin.php(195): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$pod_detail', 'APPPATH\\Controllers\\Admin.php', 195)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:46:01 --> Class "App\Models\Pod_Mstr_Model" not found
+in APPPATH\Controllers\Admin.php on line 34.
+ 1 SYSTEMPATH\CodeIgniter.php(860): App\Controllers\Admin->__construct()
+ 2 SYSTEMPATH\CodeIgniter.php(459): CodeIgniter\CodeIgniter->createController()
+ 3 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:48:50 --> Undefined array key "sup_email"
+in APPPATH\Views\admin\invoice_po.php on line 30.
+ 1 APPPATH\Views\admin\invoice_po.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sup_email"', 'APPPATH\\Views\\admin\\invoice_po.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_po', [], true)
+ 5 APPPATH\Controllers\Admin.php(202): view('admin/invoice_po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:49:16 --> Undefined array key "sup_email"
+in APPPATH\Views\admin\invoice_po.php on line 30.
+ 1 APPPATH\Views\admin\invoice_po.php(30): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sup_email"', 'APPPATH\\Views\\admin\\invoice_po.php', 30)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_po', [], true)
+ 5 APPPATH\Controllers\Admin.php(202): view('admin/invoice_po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:53:50 --> Undefined variable $pod
+in APPPATH\Views\admin\invoice_po.php on line 51.
+ 1 APPPATH\Views\admin\invoice_po.php(51): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $pod', 'APPPATH\\Views\\admin\\invoice_po.php', 51)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_po', [], true)
+ 5 APPPATH\Controllers\Admin.php(202): view('admin/invoice_po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 00:59:16 --> Undefined array key "pod_qry"
+in APPPATH\Views\admin\invoice_po.php on line 65.
+ 1 APPPATH\Views\admin\invoice_po.php(65): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "pod_qry"', 'APPPATH\\Views\\admin\\invoice_po.php', 65)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_po', [], true)
+ 5 APPPATH\Controllers\Admin.php(202): view('admin/invoice_po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:23:05 --> Undefined variable $writer
+in APPPATH\Controllers\Admin.php on line 235.
+ 1 APPPATH\Controllers\Admin.php(235): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $writer', 'APPPATH\\Controllers\\Admin.php', 235)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:23:29 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 26.
+ 1 APPPATH\Controllers\Admin.php(238): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:24:52 --> Unable to generate image: please check if the GD extension is enabled and configured correctly
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 26.
+ 1 APPPATH\Controllers\Admin.php(238): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:25:29 --> Invalid data at path "C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\public\/logo.png"
+in VENDORPATH\endroid\qr-code\src\ImageData\LogoImageData.php on line 26.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(125): Endroid\QrCode\ImageData\LogoImageData::createForLogo(Object(Endroid\QrCode\Logo\Logo))
+ 2 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(113): Endroid\QrCode\Writer\PngWriter->addLogo(Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Writer\Result\PngResult))
+ 3 APPPATH\Controllers\Admin.php(238): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:26:14 --> Endroid\QrCode\Writer\PngWriter::write(): Argument #2 ($logo) must be of type ?Endroid\QrCode\Logo\LogoInterface, string given, called in C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\app\Controllers\Admin.php on line 238
+in VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php on line 23.
+ 1 APPPATH\Controllers\Admin.php(238): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), 'Tes', Object(Endroid\QrCode\Label\Label))
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:44:29 --> Invalid data at path "C:\xampp\htdocs\JOKI\KURNIAWATY\KURNIAWATY_REV1\public\http://localhost:8080/temp_admin/assets/images/logo-inverse.png"
+in VENDORPATH\endroid\qr-code\src\ImageData\LogoImageData.php on line 26.
+ 1 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(125): Endroid\QrCode\ImageData\LogoImageData::createForLogo(Object(Endroid\QrCode\Logo\Logo))
+ 2 VENDORPATH\endroid\qr-code\src\Writer\PngWriter.php(113): Endroid\QrCode\Writer\PngWriter->addLogo(Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Writer\Result\PngResult))
+ 3 APPPATH\Controllers\Admin.php(238): Endroid\QrCode\Writer\PngWriter->write(Object(Endroid\QrCode\QrCode), Object(Endroid\QrCode\Logo\Logo), Object(Endroid\QrCode\Label\Label))
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-221219-000764')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2022-12-20 01:45:34 --> Maximum execution time of 60 seconds exceeded
+in SYSTEMPATH\Debug\Exceptions.php on line 142.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
