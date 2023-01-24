@@ -10,5 +10,5 @@ class Po_Mstr_Model extends Model
     protected $primaryKey       = 'po_code';
 
     protected $useAutoIncrement = false;
-    protected $allowedFields    = ['po_code', 'po_pr', 'po_name', 'po_desc', 'po_sup', 'po_total', 'po_status', 'po_add_by', 'po_add_date', 'po_upd_by', 'po_upd_date'];
+    protected $allowedFields    = ['po_code', 'po_pr', 'po_name', 'po_desc', 'po_sup', 'po_total', 'po_bukti_penerimaan', 'po_status', 'po_add_by', 'po_add_date', 'po_upd_by', 'po_upd_date'];
 }

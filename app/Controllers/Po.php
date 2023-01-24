@@ -272,19 +272,32 @@ class Po extends ResourceController
             $validation->setRules([
                 "po_code" => "required",
                 "po_status" => "required",
+                "po_bukti_penerimaan" => [
+                    "rules" => "uploaded[po_bukti_penerimaan]|mime_in[po_bukti_penerimaan,image/jpg,image/jpeg,image/png]|max_size[po_bukti_penerimaan,4096]",
+                    "errors" => [
+                        "uploaded" => "The po_bukti_penerimaan field is required.",
+                        "mime_in" => "File Extention Harus Berupa jpg, jpeg, png",
+                        "max_size" => "Ukuran File Maksimal 4 MB"
+                    ]
+                ]
             ]);
             $isDataValid = $validation->withRequest($this->request)->run();
 
             if ($isDataValid) {
                 $po_code = $this->request->getPost("po_code");
                 $po_status = $this->request->getPost("po_status");
+                $po_bukti_penerimaan = $this->request->getFile("po_bukti_penerimaan");
+                $fileName = $po_bukti_penerimaan->getRandomName();
 
                 $status = $this->po_mstr->update($po_code, [
+                    "po_bukti_penerimaan" => $fileName,
                     "po_status" => $po_status,
                     "po_upd_by" => $_SESSION['session_admin']['user_full_name'],
                 ]);
 
                 if ($status) {
+                    $po_bukti_penerimaan->move("_img/po/", $fileName);
+
                     $temp = $this->po_mstr->where([
                         "po_code" => $po_code,
                     ])->first();

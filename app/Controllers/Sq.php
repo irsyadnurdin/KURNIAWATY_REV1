@@ -82,48 +82,48 @@ class Sq extends ResourceController
     // ===========================================================================
     // GET SQ DETAIL
     // ===========================================================================
-    // public function get_sq_detail($sq_code = null)
-    // {
-    //     try {
-    //         $this->sqd_detail->join("sq_mstr", "sq_mstr.sq_code = sqd_detail.sqd_sq");
-    //         $this->sqd_detail->join("item_mstr", "item_mstr.item_code = sqd_detail.sqd_item");
-    //         $this->sqd_detail->join("measure_mstr", "measure_mstr.measure_code = item_mstr.item_measure");
+    public function get_sq_detail($sq_code = null)
+    {
+        try {
+            $this->sqd_detail->join("sq_mstr", "sq_mstr.sq_code = sqd_detail.sqd_sq");
+            $this->sqd_detail->join("item_mstr", "item_mstr.item_code = sqd_detail.sqd_item");
+            $this->sqd_detail->join("measure_mstr", "measure_mstr.measure_code = item_mstr.item_measure");
 
-    //         if ($sq_code != null) {
-    //             $this->sqd_detail->where(["sqd_sq" => $sq_code]);
-    //         }
+            if ($sq_code != null) {
+                $this->sqd_detail->where(["sqd_sq" => $sq_code]);
+            }
 
-    //         $data = $this->sqd_detail->findAll();
+            $data = $this->sqd_detail->findAll();
 
-    //         if ($data) {
-    //             return $this->respond([
-    //                 "success"       => true,
-    //                 "t_message"     => "Berhasil Menyelesaikan Perintah!",
-    //                 "message"       => null,
-    //                 "data"          => $data,
-    //             ], 200);
-    //         } else {
-    //             return $this->respond([
-    //                 "success"       => false,
-    //                 "t_message"     => "Oops...",
-    //                 "message"       => "Gagal Menyelesaikan Perintah!",
-    //                 "data"          => null,
-    //             ], 200);
-    //         }
-    //     } catch (\Throwable $th) {
-    //         return $this->respond([
-    //             "success"       => false,
-    //             "t_message"     => "Oops...",
-    //             "message"       => $th->getMessage()
-    //         ], 200);
-    //     } catch (\Exception $e) {
-    //         return $this->respond([
-    //             "success"       => false,
-    //             "t_message"     => "Oops...",
-    //             "message"       => $e->getMessage()
-    //         ], 200);
-    //     }
-    // }
+            if ($data) {
+                return $this->respond([
+                    "success"       => true,
+                    "t_message"     => "Berhasil Menyelesaikan Perintah!",
+                    "message"       => null,
+                    "data"          => $data,
+                ], 200);
+            } else {
+                return $this->respond([
+                    "success"       => false,
+                    "t_message"     => "Oops...",
+                    "message"       => "Gagal Menyelesaikan Perintah!",
+                    "data"          => null,
+                ], 200);
+            }
+        } catch (\Throwable $th) {
+            return $this->respond([
+                "success"       => false,
+                "t_message"     => "Oops...",
+                "message"       => $th->getMessage()
+            ], 200);
+        } catch (\Exception $e) {
+            return $this->respond([
+                "success"       => false,
+                "t_message"     => "Oops...",
+                "message"       => $e->getMessage()
+            ], 200);
+        }
+    }
 
 
     // ===========================================================================

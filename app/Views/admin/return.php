@@ -295,6 +295,23 @@
                 },
                 {
                     mData: null,
+                    title: "Bukti Penerimaan",
+                    sortable: false,
+                    sClass: "center-datatable",
+                    render: function(data, row, type, meta) {
+                        let html = "";
+
+                        if (data.return_status == "F") {
+                            html += "<button style='font-size: 10px;' class='btn btn-primary mr-2' id='popup_image' title='Popup Image' img='" + data.return_bukti_penerimaan + "'><i class='fa fa-image'></i></button>";
+                        } else {
+                            html += "-";
+                        }
+
+                        return html;
+                    },
+                },
+                {
+                    mData: null,
                     title: "Konfirmasi Diterima",
                     sortable: false,
                     sClass: "center-datatable",
@@ -324,6 +341,22 @@
                     }
                 },
             ],
+        });
+
+        $("#datatable_return tbody").on("click", "#popup_image", function() {
+            var current_row = $(this).parents("tr");
+            if (current_row.hasClass("child")) {
+                current_row = current_row.prev();
+            }
+            var data = table.row(current_row).data();
+
+            Swal.fire({
+                title: data["return_name"],
+                imageUrl: "<?= base_url("_img/return") ?>" + "/" + $(this).attr("img"),
+                imageHeight: "90%",
+                imageAlt: data["return_name"],
+                showConfirmButton: false,
+            })
         });
 
         $("#datatable_return tbody").on("click", "#detail_return", function() {
@@ -474,85 +507,79 @@
                 }).then((result) => {
                     (async () => {
                         if (result.isConfirmed) {
-                            Update_Status(data["return_code"], "F")
-                        }
-                        // else if (result.isDenied) {
-                        //     (async () => {
-                        //         Swal.fire('Changes are not saved', '', 'info')
-                        //         const {
-                        //             value: reason
-                        //         } = await Swal.fire({
-                        //             title: 'Approve Description!',
-                        //             input: 'textarea',
-                        //             inputPlaceholder: 'Enter your approve description...',
-                        //             showCancelButton: true,
-                        //             inputValidator: (value) => {
-                        //                 if (!value) {
-                        //                     return 'You need to write something!'
-                        //                 }
-                        //             }
-                        //         })
+                            (async () => {
+                                const {
+                                    value: file
+                                } = await Swal.fire({
+                                    title: "Bukti Penerimaan",
+                                    input: "file",
+                                    inputAttributes: {
+                                        "accept": "image/*",
+                                        "aria-label": "Unggah gambar item..."
+                                    }
+                                });
 
-                        //         if (reason) {
-                        //             Update_Approve(data["pr_code"], "N", reason, "N")
-                        //         }
-                        //     })()
-                        // }
+                                if (file) {
+                                    var formData = new FormData();
+                                    var return_bukti_penerimaan = $(".swal2-file")[0].files[0];
+                                    formData.append("return_code", data["return_code"]);
+                                    formData.append("return_status", "F");
+                                    formData.append("return_bukti_penerimaan", return_bukti_penerimaan);
+
+                                    $.ajax({
+                                        type: "POST",
+                                        url: "<?= base_url("return/confirm_return") ?>",
+                                        beforeSend: function(xhr) {
+                                            xhr.setRequestHeader('Authorization', "Bearer " + "<?= $_SESSION['session_admin']['access_token'] ?>");
+                                        },
+                                        data: formData,
+                                        processData: false,
+                                        contentType: false,
+                                        cache: false,
+                                        async: false,
+                                        success: function(data) {
+                                            if (data.success) {
+                                                (async () => {
+                                                    await Swal.fire({
+                                                        icon: "success",
+                                                        title: data.t_message,
+                                                        text: data.message,
+                                                        showConfirmButton: false,
+                                                        timer: 2000
+                                                    })
+
+                                                    $("#datatable_return").DataTable().ajax.reload();
+                                                })()
+                                            } else {
+                                                Swal.fire({
+                                                    icon: "error",
+                                                    title: data.t_message,
+                                                    text: data.message,
+                                                    showConfirmButton: false,
+                                                    timer: 2000
+                                                })
+                                            }
+                                        },
+                                        error: function() {
+                                            Swal.fire({
+                                                icon: "error",
+                                                title: "Oops...",
+                                                text: "Kesalahan tidak diketahui, halaman akan dimuat ulang!",
+                                            }).then((result) => {
+                                                if (result.value) {
+                                                    window.location.assign("<?= current_url() ?>");
+                                                }
+                                            })
+                                        }
+                                    });
+                                }
+                            })()
+                        }
                     })()
                 });
             });
         }
     })
-
-    function Update_Status(return_code, return_status) {
-        $.ajax({
-            type: "POST",
-            url: "<?= base_url("return/confirm_return") ?>",
-            beforeSend: function(xhr) {
-                xhr.setRequestHeader('Authorization', "Bearer " + "<?= $_SESSION['session_admin']['access_token'] ?>");
-            },
-            data: {
-                return_code: return_code,
-                return_status: return_status,
-            },
-            success: function(data) {
-                if (data.success) {
-                    (async () => {
-                        await Swal.fire({
-                            icon: "success",
-                            title: data.t_message,
-                            text: data.message,
-                            showConfirmButton: false,
-                            timer: 2000
-                        })
-
-                        $("#datatable_return").DataTable().ajax.reload();
-                    })()
-                } else {
-                    Swal.fire({
-                        icon: "error",
-                        title: data.t_message,
-                        text: data.message,
-                        showConfirmButton: false,
-                        timer: 2000
-                    })
-                }
-            },
-            error: function() {
-                (async () => {
-                    await Swal.fire({
-                        icon: "error",
-                        title: "Oops...",
-                        text: "Kesalahan tidak diketahui, halaman akan dimuat ulang!",
-                        showConfirmButton: false,
-                        timer: 2000
-                    })
-
-                    window.location.assign("<?= current_url() ?>");
-                })()
-            }
-        });
-    }
 </script>
 
 <?= $this->endSection() ?>

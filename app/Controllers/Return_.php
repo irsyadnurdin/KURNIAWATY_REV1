@@ -316,18 +316,31 @@ class Return_ extends ResourceController
             $validation->setRules([
                 "return_code" => "required",
                 "return_status" => "required",
+                "return_bukti_penerimaan" => [
+                    "rules" => "uploaded[return_bukti_penerimaan]|mime_in[return_bukti_penerimaan,image/jpg,image/jpeg,image/png]|max_size[return_bukti_penerimaan,4096]",
+                    "errors" => [
+                        "uploaded" => "The return_bukti_penerimaan field is required.",
+                        "mime_in" => "File Extention Harus Berupa jpg, jpeg, png",
+                        "max_size" => "Ukuran File Maksimal 4 MB"
+                    ]
+                ]
             ]);
             $isDataValid = $validation->withRequest($this->request)->run();
 
             if ($isDataValid) {
                 $return_code = $this->request->getPost("return_code");
                 $return_status = $this->request->getPost("return_status");
+                $return_bukti_penerimaan = $this->request->getFile("return_bukti_penerimaan");
+                $fileName = $return_bukti_penerimaan->getRandomName();
 
                 $status = $this->return_mstr->update($return_code, [
+                    "return_bukti_penerimaan" => $fileName,
                     "return_status" => $return_status,
                 ]);
 
                 if ($status) {
+                    $return_bukti_penerimaan->move("_img/return/", $fileName);
+
                     $temp = $this->return_mstr->where([
                         "return_code" => $return_code,
                     ])->first();

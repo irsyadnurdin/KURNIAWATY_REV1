@@ -14,6 +14,8 @@ use App\Models\Item_Mstr_Model;
 use App\Models\Item_Group_Model;
 use App\Models\Measure_Mstr_Model;
 use App\Models\Pod_Detail_Model;
+use App\Models\Sq_Mstr_Model;
+use App\Models\Sqd_Detail_Model;
 use TCPDF;
 
 use Endroid\QrCode\Color\Color;
@@ -47,6 +49,8 @@ class Admin extends ResourceController
         $this->item_mstr = new Item_Mstr_Model();
         $this->item_group = new Item_Group_Model();
         $this->measure_mstr = new Measure_Mstr_Model();
+        $this->sq_mstr = new Sq_Mstr_Model();
+        $this->sqd_detail = new Sqd_Detail_Model();
         // $this->language = \Config\Services::language();
         // $this->language->setLocale(WEB_LANG);
     }
@@ -88,7 +92,7 @@ class Admin extends ResourceController
         $data = $this->required();
 
         $data["measure_es"] = $this->measure_mstr->findAll();
-        // $this->item_group->where(["itemg_code !=" => "ITMG-DEFAULT"]);
+        $this->item_group->where(["itemg_code !=" => "ITMG-BAHANBAKU"]);
         $data["item_group_es"] = $this->item_group->findAll();
 
         return view('admin/item', $data);
@@ -106,6 +110,21 @@ class Admin extends ResourceController
         $data = $this->required();
 
         return view('admin/measure', $data);
+    }
+
+
+    // ===========================================================================
+    // BAHAN BAKU
+    // ===========================================================================
+    public function bahan_baku()
+    {
+        $data = $this->required();
+
+        $data["measure_es"] = $this->measure_mstr->findAll();
+        $this->item_group->where(["itemg_code" => "ITMG-BAHANBAKU"]);
+        $data["item_group_es"] = $this->item_group->findAll();
+
+        return view('admin/bahan_baku', $data);
     }
 
 
@@ -157,6 +176,61 @@ class Admin extends ResourceController
         return view('admin/sq_add', $data);
     }
 
+    public function sq_invoice($sq_code = null)
+    {
+        if ($sq_code) {
+            $this->sq_mstr->where(["sq_code" => $sq_code]);
+            $data = $this->sq_mstr->first();
+
+            if ($data) {
+                $data = $this->required();
+                // $data['pr_code'] = $pr_code;
+
+                $this->sq_mstr->select("
+                    *,
+                    DATE_FORMAT(sq_add_date, '%d/%m/%y') AS _sq_add_date,
+                    DATE_FORMAT(sq_upd_date, '%W, %d %M %Y - %H:%i:%s') AS _sq_upd_date
+                ");
+                $this->sq_mstr->join("user_mstr", "user_mstr.user_id = sq_mstr.sq_user");
+                $data["sq"] = $this->sq_mstr->find($sq_code);
+
+                $this->sqd_detail->join("item_mstr", "item_mstr.item_code = sqd_detail.sqd_item");
+                $this->sqd_detail->where(["sqd_sq" => $sq_code]);
+                $data["sqd_es"] = $this->sqd_detail->findAll();
+
+                $writer = new PngWriter();
+
+                // Create QR code
+                $qrCode = QrCode::create(base_url('admin/sq_invoice/' . $sq_code))
+                    ->setEncoding(new Encoding('UTF-8'))
+                    ->setErrorCorrectionLevel(new ErrorCorrectionLevelLow())
+                    ->setSize(300)
+                    ->setMargin(10)
+                    ->setRoundBlockSizeMode(new RoundBlockSizeModeMargin())
+                    ->setForegroundColor(new Color(0, 0, 0))
+                    ->setBackgroundColor(new Color(255, 255, 255));
+
+                // Create generic logo
+                $logo = Logo::create(FCPATH . 'temp_admin/assets/images/logo-inverse.png')
+                    ->setResizeToWidth(200);
+
+                // Create generic label
+                $label = Label::create('Kurt Beans Coffee')
+                    ->setTextColor(new Color(0, 0, 0));
+
+                $result = $writer->write($qrCode, $logo, $label);
+
+                $data["qr_code"] = $result->getDataUri();
+
+                return view('admin/invoice_sq', $data);
+            } else {
+                return redirect()->to('/admin/sq');
+            }
+        } else {
+            return redirect()->to('/admin/sq');
+        }
+    }
+
 
     // ===========================================================================
     // PURCHASE REQUISITION
@@ -176,6 +250,63 @@ class Admin extends ResourceController
         $data["sup_es"] = $this->suplier_mstr->findAll();
 
         return view('admin/pr_add', $data);
+    }
+
+    public function pr_invoice($pr_code = null)
+    {
+        if ($pr_code) {
+            $this->pr_mstr->where(["pr_code" => $pr_code]);
+            $this->pr_mstr->where(["pr_approve" => "Y"]);
+            $data = $this->pr_mstr->first();
+
+            if ($data) {
+                $data = $this->required();
+                // $data['pr_code'] = $pr_code;
+
+                $this->pr_mstr->select("
+                    *,
+                    DATE_FORMAT(pr_add_date, '%d/%m/%y') AS _pr_add_date,
+                    DATE_FORMAT(pr_upd_date, '%W, %d %M %Y - %H:%i:%s') AS _pr_upd_date
+                ");
+                $this->pr_mstr->join("suplier_mstr", "suplier_mstr.sup_code = pr_mstr.pr_sup");
+                $this->pr_mstr->where(["pr_approve" => "Y"]);
+                $data["pr"] = $this->pr_mstr->find($pr_code);
+
+                $this->prd_detail->join("item_mstr", "item_mstr.item_code = prd_detail.prd_item");
+                $this->prd_detail->where(["prd_pr" => $pr_code]);
+                $data["prd_es"] = $this->prd_detail->findAll();
+
+                $writer = new PngWriter();
+
+                // Create QR code
+                $qrCode = QrCode::create(base_url('admin/pr_invoice/' . $pr_code))
+                    ->setEncoding(new Encoding('UTF-8'))
+                    ->setErrorCorrectionLevel(new ErrorCorrectionLevelLow())
+                    ->setSize(300)
+                    ->setMargin(10)
+                    ->setRoundBlockSizeMode(new RoundBlockSizeModeMargin())
+                    ->setForegroundColor(new Color(0, 0, 0))
+                    ->setBackgroundColor(new Color(255, 255, 255));
+
+                // Create generic logo
+                $logo = Logo::create(FCPATH . 'temp_admin/assets/images/logo-inverse.png')
+                    ->setResizeToWidth(200);
+
+                // Create generic label
+                $label = Label::create('Kurt Beans Coffee')
+                    ->setTextColor(new Color(0, 0, 0));
+
+                $result = $writer->write($qrCode, $logo, $label);
+
+                $data["qr_code"] = $result->getDataUri();
+
+                return view('admin/invoice_pr', $data);
+            } else {
+                return redirect()->to('/admin/pr');
+            }
+        } else {
+            return redirect()->to('/admin/pr');
+        }
     }
 
 
@@ -220,7 +351,7 @@ class Admin extends ResourceController
     {
         if ($po_code) {
             $this->po_mstr->where(["po_code" => $po_code]);
-            $this->po_mstr->where(["po_status" => "F"]);
+            // $this->po_mstr->where(["po_status" => "F"]);
             $data = $this->po_mstr->first();
 
             if ($data) {
@@ -233,7 +364,7 @@ class Admin extends ResourceController
                     DATE_FORMAT(po_upd_date, '%W, %d %M %Y - %H:%i:%s') AS _po_upd_date
                 ");
                 $this->po_mstr->join("suplier_mstr", "suplier_mstr.sup_code = po_mstr.po_sup");
-                $this->po_mstr->where(["po_status" => "F"]);
+                // $this->po_mstr->where(["po_status" => "F"]);
                 $data["po"] = $this->po_mstr->find($po_code);
 
                 $this->pod_detail->join("item_mstr", "item_mstr.item_code = pod_detail.pod_item");
@@ -334,7 +465,7 @@ class Admin extends ResourceController
 
         $this->item_mstr->join("item_group", "item_group.itemg_code = item_mstr.item_group");
         $this->item_mstr->join("measure_mstr", "measure_mstr.measure_code = item_mstr.item_measure");
-        $this->item_mstr->where(["item_type !=" => "BL"]);
+        $this->item_mstr->where(["item_type" => "PRD"]);
         $this->item_mstr->where(["item_active" => "Y"]);
         if (count($item) != 0) {
             $this->item_mstr->whereNotIn('item_code', $item);

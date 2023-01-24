@@ -177,6 +177,12 @@
             // serverMethod: "POST",
             ajax: {
                 url: "<?= base_url("item/get_item") ?>",
+                type: 'POST',
+                data: function(dd) {
+                    return JSON.stringify({
+                        'item_type': ['BB']
+                    });
+                },
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('Authorization', "Bearer " + "<?= $_SESSION['session_admin']['access_token'] ?>");
                 },
@@ -215,18 +221,10 @@
                 },
                 {
                     mData: null,
-                    title: "Grup Item",
+                    title: "Stok",
                     sClass: "center-datatable",
                     render: function(data, row, type, meta) {
-                        return (data.item_group ? data.itemg_name : "-");
-                    },
-                },
-                {
-                    mData: null,
-                    title: "Tipe Item",
-                    sClass: "center-datatable",
-                    render: function(data, row, type, meta) {
-                        return (data.item_type ? data.item_type : "-");
+                        return (data.item_stock ? `${data.item_stock} ${data.item_measure}` : "-");
                     },
                 },
                 {
@@ -409,12 +407,13 @@
                                     timer: 2000
                                 })
 
-                                $("#pr_name").val("");
-                                $("#pr_desc").val("");
-                                $("#pr_sup").val("");
-                                $("#pr_total").val(0);
-                                $("#datatable_pr").DataTable().clear().draw();
-                                $("#datatable_item").DataTable().ajax.reload();
+                                // $("#pr_name").val("");
+                                // $("#pr_desc").val("");
+                                // $("#pr_sup").val("");
+                                // $("#pr_total").val(0);
+                                // $("#datatable_pr").DataTable().clear().draw();
+                                // $("#datatable_item").DataTable().ajax.reload();
+                                window.location.assign("<?= base_url("/" . $locale . "/admin/pr") ?>");
                             })()
                         } else {
                             Swal.fire({

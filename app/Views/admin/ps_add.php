@@ -151,7 +151,7 @@
                 data: function(dd) {
                     return JSON.stringify({
                         'ps_item': ps_item,
-                        'item_type': ['BL', 'BJ']
+                        'item_type': ['BB']
                     });
                 },
                 beforeSend: function(xhr) {
@@ -188,22 +188,6 @@
                     sClass: "center-datatable",
                     render: function(data, row, type, meta) {
                         return (data.item_name ? data.item_name : "-");
-                    },
-                },
-                {
-                    mData: null,
-                    title: "Grup Item",
-                    sClass: "center-datatable",
-                    render: function(data, row, type, meta) {
-                        return (data.itemg_name ? data.itemg_name : "-");
-                    },
-                },
-                {
-                    mData: null,
-                    title: "Tipe Item",
-                    sClass: "center-datatable",
-                    render: function(data, row, type, meta) {
-                        return (data.item_type ? data.item_type : "-");
                     },
                 },
                 {

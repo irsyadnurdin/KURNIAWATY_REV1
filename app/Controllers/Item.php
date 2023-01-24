@@ -188,7 +188,6 @@ class Item extends ResourceController
                 "item_code" => "required",
                 "item_name" => "required",
                 "item_group" => "required",
-                "item_type" => "required",
             ]);
             $isDataValid = $validation->withRequest($this->request)->run();
 
@@ -197,13 +196,11 @@ class Item extends ResourceController
                 $item_name = $this->request->getPost("item_name");
                 $item_desc = $this->request->getPost("item_desc");
                 $item_group = $this->request->getPost("item_group");
-                $item_type = $this->request->getPost("item_type");
 
                 $status = $this->item_mstr->update($item_code, [
                     "item_name" => $item_name,
                     "item_desc" => $item_desc,
                     "item_group" => $item_group,
-                    "item_type" => $item_type,
                 ]);
 
                 if ($status) {

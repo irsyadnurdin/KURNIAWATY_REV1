@@ -35,7 +35,8 @@ class Item_Group extends ResourceController
     public function get_item_group()
     {
         try {
-            $this->item_group->orderBy('itemg_name', 'ASC');
+            $this->item_group->where(["itemg_code !=" => "ITMG-BAHANBAKU"]);
+            $this->item_group->orderBy('itemg_code', 'ASC');
             $data = $this->item_group->findAll();
 
             if ($data) {

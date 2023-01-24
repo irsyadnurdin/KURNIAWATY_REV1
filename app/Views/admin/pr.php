@@ -341,6 +341,8 @@
                             html += "<i class='fa fa-check' style='color:#1cc88a'></i>";
                         } else if (data.pr_create_po == "N") {
                             html += "<i class='fa fa-times' style='color:#e74a3b'></i>";
+                        } else {
+                            html += "-";
                         }
 
                         return html;
@@ -354,6 +356,9 @@
                     render: function(data, row, type, meta) {
                         let html = "";
 
+                        if ((data.pr_create_po != "N") && (data.pr_approve != "P")) {
+                            html += "<a href='<?= base_url("admin/pr_invoice") ?>/" + data.pr_code + "' target='_blank' style='font-size: 10px;' class='btn btn-primary mr-2'><i class='fa fa-print'></i></a>";
+                        }
                         html += "<button style='font-size: 10px;' class='btn btn-primary' id='detail_pr' title='Detail Permintaan Pembelian'><i class='fa fa-eye'></i></button>";
 
                         return html;

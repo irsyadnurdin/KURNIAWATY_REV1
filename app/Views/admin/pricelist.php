@@ -200,7 +200,7 @@
                 data: function(dd) {
                     return JSON.stringify({
                         'item_type': [
-                            "BJ", "JL"
+                            "PRD"
                         ]
                     });
                 },

@@ -277,21 +277,23 @@
                             //     timer: 2000
                             // })
 
-                            table_item.row(current_row).remove().draw();
+                            // table_item.row(current_row).remove().draw();
 
-                            $('#datatable_return').DataTable().row.add([
-                                '<input hidden type="text" id="returnd_item" name="returnd_item[]" value="' + data.data.item_code + '">' + data.data.item_code,
-                                data.data.item_name,
-                                `<input type="number" id="returnd_qty" name="returnd_qty[]" min="1" max="${data.data.pod_qty}" value="1" required/>`,
-                                `${data.data.item_measure} ${data.data.measure_name}`,
-                                '<input type="text" id="returnd_reason" name="returnd_reason[]" required/>',
-                            ]).draw();
+                            // $('#datatable_return').DataTable().row.add([
+                            //     '<input hidden type="text" id="returnd_item" name="returnd_item[]" value="' + data.data.item_code + '">' + data.data.item_code,
+                            //     data.data.item_name,
+                            //     `<input type="number" id="returnd_qty" name="returnd_qty[]" min="1" max="${data.data.pod_qty}" value="1" required/>`,
+                            //     `${data.data.item_measure} ${data.data.measure_name}`,
+                            //     '<input type="text" id="returnd_reason" name="returnd_reason[]" required/>',
+                            // ]).draw();
 
-                            // $('#datatable_return').append(data.detail);
-                            // $("#datatable_return").DataTable().ajax.reload();
-                            $('#datatable_return').DataTable()
-                                .columns.adjust()
-                                .responsive.recalc();
+                            // // $('#datatable_return').append(data.detail);
+                            // // $("#datatable_return").DataTable().ajax.reload();
+                            // $('#datatable_return').DataTable()
+                            //     .columns.adjust()
+                            //     .responsive.recalc();
+
+                            window.location.assign("<?= base_url("/" . $locale . "/admin/return") ?>");
                         })()
                     } else {
                         Swal.fire({

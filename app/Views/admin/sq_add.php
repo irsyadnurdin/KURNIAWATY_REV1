@@ -189,7 +189,7 @@
                 type: 'POST',
                 data: function(dd) {
                     return JSON.stringify({
-                        'item_type': ['JL', 'BJ']
+                        'item_type': ['PRD']
                     });
                 },
                 beforeSend: function(xhr) {

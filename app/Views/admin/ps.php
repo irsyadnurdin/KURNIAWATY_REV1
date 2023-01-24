@@ -246,7 +246,10 @@
                         let html = "";
 
                         html += "<button style='font-size: 10px;' class='btn btn-primary mr-2' id='detail_ps' title='Detail Product Structure'><i class='fa fa-eye'></i></button>";
-                        html += "<button style='font-size: 10px;' class='btn btn-primary' id='delete_data' title='Delete Data'><i class='fa fa-trash'></i></button>";
+
+                        if ("<?= $_SESSION['session_admin']['user_role'] ?>" == "warehouse") {
+                            html += "<button style='font-size: 10px;' class='btn btn-primary' id='delete_data' title='Delete Data'><i class='fa fa-trash'></i></button>";
+                        }
 
                         return html;
                     }

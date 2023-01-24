@@ -86,15 +86,6 @@
                         </select>
                     </div>
                     <div class="form-group">
-                        <label for="item_type">Tipe Item (*)</label>
-                        <select id="item_type" name="item_type" class="form-control" required="">
-                            <option value="">Pilih Tipe Item...</option>
-                            <option value="JL">Jual</option>
-                            <option value="BL">Beli</option>
-                            <option value="JB">Jual & Beli</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
                         <label for="item_measure">Satuan Item (*)</label>
                         <select id="item_measure" name="item_measure" class="form-control" required="">
                             <option value="">Pilih Satuan Item...</option>
@@ -245,9 +236,15 @@
             // serverSide: true,
             // serverMethod: "POST",
             ajax: {
+                type: "POST",
                 url: "<?= base_url("item/get_item/all") ?>",
                 beforeSend: function(xhr) {
                     xhr.setRequestHeader('Authorization', "Bearer " + "<?= $_SESSION['session_admin']['access_token'] ?>");
+                },
+                data: function(dd) {
+                    return JSON.stringify({
+                        'item_type': ['PRD']
+                    });
                 },
                 dataSrc: function(json) {
                     if (json != null) {
@@ -292,14 +289,6 @@
                 },
                 {
                     mData: null,
-                    title: "Tipe Item",
-                    sClass: "center-datatable",
-                    render: function(data, row, type, meta) {
-                        return (data.item_type ? data.item_type : "-");
-                    },
-                },
-                {
-                    mData: null,
                     title: "Grup Item",
                     sClass: "center-datatable",
                     render: function(data, row, type, meta) {
@@ -311,7 +300,7 @@
                     title: "Stok",
                     sClass: "center-datatable",
                     render: function(data, row, type, meta) {
-                        return (data.item_type == "JL" ? "-" : (data.item_stock ? `${data.item_stock} ${data.item_measure}` : "-"));
+                        return (data.item_stock ? `${data.item_stock} ${data.item_measure}` : "-");
                     },
                 },
                 {
@@ -402,7 +391,6 @@
                 $("#item_name").val(data["item_name"]);
                 $("#item_desc").val(data["item_desc"]);
                 $("#item_group").val(data["item_group"]);
-                $("#item_type").val(data["item_type"]);
                 $("#item_measure").val(data["item_measure"]);
 
                 $("#form_item_action").attr("act", "edit");
@@ -573,7 +561,6 @@
             $("#item_name").val("");
             $("#item_desc").val("");
             $("#item_group").val("ITMG-DEFAULT");
-            $("#item_type").val("JL");
             $("#item_measure").val("");
 
             $("#form_item_action").attr("act", "add");
@@ -599,7 +586,7 @@
             }
 
             var formData = new FormData(this);
-            // formData.append("cus_active", "Y");
+            formData.append("item_type", "PRD");
 
             $.ajax({
                 type: "POST",

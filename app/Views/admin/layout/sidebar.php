@@ -38,38 +38,47 @@
                 <li>
                     <a href="<?= base_url("/" . $locale . "/admin") ?>" id="menu-dashboard">
                         <i class="metismenu-icon pe-7s-rocket"></i>
-                        Dashboards
+                        Beranda
                     </a>
                 </li>
                 <li id="menu-item">
                     <a href="#">
                         <i class="metismenu-icon pe-7s-box2"></i>
-                        Item
+                        Produk
                         <i class="metismenu-state-icon pe-7s-angle-down caret-left"></i>
                     </a>
                     <ul id="menu-item-ul">
                         <li>
                             <a href="<?= base_url("/" . $locale . "/admin/item") ?>" id="menu-item-ul-li">
                                 <i class="metismenu-icon"></i>
-                                Item
+                                Produk
                             </a>
                         </li>
                         <li>
                             <a href="<?= base_url("/" . $locale . "/admin/item_group") ?>" id="menu-itemgroup-ul-li">
                                 <i class="metismenu-icon"></i>
-                                Grup Item
+                                Grup Produk
                             </a>
                         </li>
                         <?php if ($_SESSION['session_admin']['user_role'] != "cashier") : ?>
                             <li>
                                 <a href="<?= base_url("/" . $locale . "/admin/measure") ?>" id="menu-measure-ul-li">
                                     <i class="metismenu-icon"></i>
-                                    Satuan Item
+                                    Satuan Produk
                                 </a>
                             </li>
                         <?php endif; ?>
                     </ul>
                 </li>
+
+                <?php if ($_SESSION['session_admin']['user_role'] != "cashier") : ?>
+                    <li>
+                        <a href="<?= base_url("/" . $locale . "/admin/bahan_baku") ?>" id="menu-bahanbaku">
+                            <i class="metismenu-icon pe-7s-box2"></i>
+                            Bahan Baku
+                        </a>
+                    </li>
+                <?php endif; ?>
 
                 <?php if ($_SESSION['session_admin']['user_role'] != "warehouse") : ?>
                     <li>
@@ -124,7 +133,7 @@
                         </a>
                         <ul id="menu-sq-ul">
                             <li>
-                                <a href="<?= base_url("/" . $locale . "/admin/sc") ?>" id="menu-sq-ul-li">
+                                <a href="<?= base_url("/" . $locale . "/admin/sq") ?>" id="menu-sq-ul-li">
                                     <i class="metismenu-icon"></i>
                                     Penjualan
                                 </a>

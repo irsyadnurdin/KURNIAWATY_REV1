@@ -1,0 +1,80 @@
+CRITICAL - 2023-01-23 11:01:33 --> Invalid file: admin/invoice_pr.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/invoice_pr.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_pr', [], true)
+ 3 APPPATH\Controllers\Admin.php(244): view('admin/invoice_pr', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->pr_invoice('PR-230123-000691')
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 11:05:59 --> Trying to access array offset on value of type null
+in APPPATH\Views\admin\invoice_po.php on line 18.
+ 1 APPPATH\Views\admin\invoice_po.php(18): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'APPPATH\\Views\\admin\\invoice_po.php', 18)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_po.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_po', [], true)
+ 5 APPPATH\Controllers\Admin.php(339): view('admin/invoice_po', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->po_invoice('PO-230124-000261')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:02:36 --> Invalid file: admin/sq.php
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(201): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/sq.php')
+ 2 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/sq', [], true)
+ 3 APPPATH\Controllers\Admin.php(156): view('admin/sq', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq()
+ 5 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 6 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:22:10 --> Undefined property: App\Controllers\Admin::$sq_mstr
+in APPPATH\Controllers\Admin.php on line 178.
+ 1 APPPATH\Controllers\Admin.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$sq_mstr', 'APPPATH\\Controllers\\Admin.php', 178)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_invoice('SQ-230113-000206')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:23:41 --> Undefined property: App\Controllers\Admin::$sq_mstr
+in APPPATH\Controllers\Admin.php on line 178.
+ 1 APPPATH\Controllers\Admin.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$sq_mstr', 'APPPATH\\Controllers\\Admin.php', 178)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_invoice('SQ-230113-000206')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:23:44 --> Undefined property: App\Controllers\Admin::$sq_mstr
+in APPPATH\Controllers\Admin.php on line 178.
+ 1 APPPATH\Controllers\Admin.php(178): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined property: App\\Controllers\\Admin::$sq_mstr', 'APPPATH\\Controllers\\Admin.php', 178)
+ 2 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_invoice('SQ-230113-000206')
+ 3 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 4 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+ 6 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:24:24 --> Undefined array key "sup_name"
+in APPPATH\Views\admin\invoice_sq.php on line 27.
+ 1 APPPATH\Views\admin\invoice_sq.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sup_name"', 'APPPATH\\Views\\admin\\invoice_sq.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_sq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_sq', [], true)
+ 5 APPPATH\Controllers\Admin.php(225): view('admin/invoice_sq', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_invoice('SQ-230113-000206')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
+CRITICAL - 2023-01-23 12:24:28 --> Undefined array key "sup_name"
+in APPPATH\Views\admin\invoice_sq.php on line 27.
+ 1 APPPATH\Views\admin\invoice_sq.php(27): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key "sup_name"', 'APPPATH\\Views\\admin\\invoice_sq.php', 27)
+ 2 SYSTEMPATH\View\View.php(213): include('APPPATH\\Views\\admin\\invoice_sq.php')
+ 3 SYSTEMPATH\View\View.php(216): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1135): CodeIgniter\View\View->render('admin/invoice_sq', [], true)
+ 5 APPPATH\Controllers\Admin.php(225): view('admin/invoice_sq', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(898): App\Controllers\Admin->sq_invoice('SQ-230113-000206')
+ 7 SYSTEMPATH\CodeIgniter.php(468): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Admin))
+ 8 SYSTEMPATH\CodeIgniter.php(351): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(55): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Commands\Server\rewrite.php(43): require_once('FCPATH\\index.php')
